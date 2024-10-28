@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Tweacher",
+  "version": "1.0",
+  "description": "Explains tweets using AI (OpenAI)",
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "action": {
+    "default_icon": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://twitter.com/*", "https://x.com/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "host_permissions": [
+    "https://api.openai.com/*"
+  ]
+}
